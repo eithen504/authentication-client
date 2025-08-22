@@ -1,7 +1,9 @@
 import React, { useState, type FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const RegisterPage: React.FC = () => {
+    const naviagate = useNavigate();
     const [username, setUsername] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [token, setToken] = useState<string>("")
@@ -85,6 +87,7 @@ const RegisterPage: React.FC = () => {
                     toast.error(data.detail || "Error occurred")
                 } else {
                     toast.success("Welcome To Our App.")
+                    naviagate("/")
                 }
             } catch (error) {
                 console.error("Error:", error);
