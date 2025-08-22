@@ -8,7 +8,7 @@ const RegisterPage: React.FC = () => {
     const [fullname, setFullname] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [formType, setFormType] = useState<"validateUser" | "verifyEmail" | "RegisterUser">("validateUser")
+    const [formType, setFormType] = useState<"validateUser" | "verifyEmail" | "RegisterUser">("RegisterUser")
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // prevent page reload
@@ -17,7 +17,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "validateUser") {
             try {
-                const response = await fetch("http://localhost:8000/api/v1/user/validate-user", {
+                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/validate-user", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "verifyEmail") {
             try {
-                const response = await fetch("http://localhost:8000/api/v1/user/verify-email", {
+                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/verify-email", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "RegisterUser") {
             try {
-                const response = await fetch("http://localhost:8000/api/v1/user/register-user", {
+                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/register-user", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
