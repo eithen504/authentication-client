@@ -19,7 +19,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "validateUser") {
             try {
-                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/validate-user", {
+                const response = await fetch("https://authentication-server-1rt2.onrender.com/api/v1/user/validate-user", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "verifyEmail") {
             try {
-                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/verify-email", {
+                const response = await fetch("https://authentication-server-1rt2.onrender.com/api/v1/user/verify-email", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const RegisterPage: React.FC = () => {
 
         if (formType == "RegisterUser") {
             try {
-                const response = await fetch("https://authentication-server-terl.onrender.com/api/v1/user/register-user", {
+                const response = await fetch("https://authentication-server-1rt2.onrender.com/api/v1/user/register-user", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
