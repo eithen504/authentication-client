@@ -10,7 +10,7 @@ const RegisterPage: React.FC = () => {
     const [fullname, setFullname] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [formType, setFormType] = useState<"validateUser" | "verifyEmail" | "RegisterUser">("RegisterUser")
+    const [formType, setFormType] = useState<"validateUser" | "verifyEmail" | "RegisterUser">("validateUser")
 
     const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // prevent page reload
